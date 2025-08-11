@@ -90,7 +90,7 @@ export const Item = (props) => {
   }, [itemNum]);
   
   useEffect(() => {
-    fetch("/api/getAll").then((res) => res.json()).then((data) => setNames(data))
+    fetch("https://bestiasapi.onrender.com/api/getAll").then((res) => res.json()).then((data) => setNames(data))
   }, [])
 
   for (let i = 0; i < itemNum; i++) {
