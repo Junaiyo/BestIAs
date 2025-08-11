@@ -62,7 +62,7 @@ export const Item = (props) => {
     setEvery(prev => [...prev, [nameDesc[index], utilities[index], link[index], login[index]]])
     });
   if (every.length == itemNum) {
-    fetch("/api/add/item", {
+    fetch("https://bestiasapi.onrender.com/api/add/item", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

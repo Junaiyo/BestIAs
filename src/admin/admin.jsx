@@ -13,7 +13,7 @@ export const Admin = () => {
   }
 
   const verify = () => {
-    fetch(`/api/verify?key=${password}`).then((res) => res.text()).then((data) => {
+    fetch(`https://bestiasapi.onrender.com/api/verify?key=${password}`).then((res) => res.text()).then((data) => {
       setVerified(data === "true" ? true : false);
     })
     setSubmitted(true);

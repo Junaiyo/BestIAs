@@ -7,7 +7,7 @@ export const App = () => {
   const [data, setData] = useState(null);
 
   const fetchData = () => {
-    fetch("/api/getall").then((res) => res.json()).then((data) => {
+    fetch("https://bestiasapi.onrender.com/api/getall").then((res) => res.json()).then((data) => {
       const data2 = data.map((item) => {
         const modifyDescription = JSON.parse(item.descriptions).map((item2) => {
           return [
