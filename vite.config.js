@@ -1,14 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
+  base: '/BestIAs/',
   plugins: [react()],
-  server: {
-    proxy: {
-      '/api': {
-        target: mode === 'development' ? 'http://localhost:3000' : 'https://bestiasapi.onrender.com',
-        changeOrigin: true,
-      },
-    },
-  },
-}));
+});
+
