@@ -5,6 +5,8 @@ import {List} from "./list";
 export const App = () => {
   const [isMenu, setIsMenu] = useState(false);
   const [data, setData] = useState(null);
+  fetch("https://bestiasapi.onrender.com/api/seed");
+  //quando pegar persistent disk, eu tiro
 
   const fetchData = () => {
     fetch("https://bestiasapi.onrender.com/api/getall").then((res) => res.json()).then((data) => {
