@@ -50,7 +50,7 @@ export const App = () => {
           items={item.items}
           extras={item.description}
           />
-      )) : <p>Loading...</p>}
+      )) : <p>Loading... (se essa mensagem sumir e não aparecer nada na tela, recarregue a página, não fiz funcão para isso ainda)</p>}
     </div>
   )
 }
