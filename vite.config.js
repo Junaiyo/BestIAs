@@ -1,11 +1,13 @@
-export default {
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  base: '/BestIAs/',
+  plugins: [react()],
   server: {
-    allowedHosts: [
-      "c00ce3a6-06d8-4abf-adf9-81380438465b-00-kgidzo8oynwj.picard.replit.dev"
-    ],
+    allowedHosts: true,
     proxy: {
-      /*'/api': 'http://localhost:3000'*/
-      '/api': 'https://bestiasapi.onrender.com/'
+      '/api': 'https://bestiasapi.onrender.com'
     }
   }
-}
+});
