@@ -16,6 +16,18 @@
   margin: 15px;
 }
 
+.parag .v {
+  display: block;
+}
+
+.deta details {
+  margin: 0;
+}
+
+.summar {
+  color: white;
+}
+
 #att, h2 {color: white;}
 
 @media(min-width: 800px) {
@@ -28,7 +40,6 @@
   }
 
   .summar {
-    color: white;
     font-size: 150%;
   }
 }

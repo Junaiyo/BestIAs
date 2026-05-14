@@ -62,7 +62,7 @@ export const Item = (props) => {
     setEvery(prev => [...prev, [nameDesc[index], utilities[index], link[index], login[index]]])
     });
   if (every.length == itemNum) {
-    fetch("https://bestiasapi.onrender.com/api/add/item", {
+    fetch("/api/add/item", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export const Item = (props) => {
   }, [itemNum]);
   
   useEffect(() => {
-    fetch("https://bestiasapi.onrender.com/api/getAll").then((res) => res.json()).then((data) => setNames(data))
+    fetch("/api/getAll").then((res) => res.json()).then((data) => setNames(data))
   }, [])
 
   for (let i = 0; i < itemNum; i++) {
