@@ -61,7 +61,7 @@ const Publish = () => {
     setAll(prev => [...prev, [nameDesc[index], utilities[index], link[index], login[index]]])
     });
   if (all.length === quantity) {
-    fetch("/api/add/category", {
+    fetch("https://bestiasapi.onrender.com/api/add/category", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
