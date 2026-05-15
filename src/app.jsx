@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./styles/style.css";
 import {List} from "./list";
 
-fetch("/api/seed")
+fetch("https://bestiasapi.onrender.com/api/seed")
 
 export const App = () => {
   const [isMenu, setIsMenu] = useState(false);
@@ -43,18 +43,18 @@ export const App = () => {
   }
 
   useEffect(() => {
-    fetchData("/api/getall");
+    fetchData("https://bestiasapi.onrender.com/api/getall");
   }, []);
 
   const alterToOther = () => {
     setIsMenu(false);
     setIsLoading(true);
     if (!isGames) {
-    fetchData("/api/get/games");
+    fetchData("https://bestiasapi.onrender.com/api/get/games");
       setIsGames(true);
       return;
     }
-    fetchData("/api/getall");
+    fetchData("https://bestiasapi.onrender.com/api/getall");
     setIsGames(false);
   }
 
